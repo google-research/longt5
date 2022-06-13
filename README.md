@@ -87,3 +87,25 @@ We have released the following checkpoints for LongT5 pre-trained models:
 * **LongT5-Local-Large** (780 million parameters): [gs://t5-data/pretrained_models/t5x/longt5/local_large](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/longt5/local_large/)
 * **LongT5-TGlobal-Large** (780 million parameters): [gs://t5-data/pretrained_models/t5x/longt5/tglobal_large](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/longt5/tglobal_large/)
 * **LongT5-TGlobal-XL** (3 billion parameters): [gs://t5-data/pretrained_models/t5x/longt5/tglobal_xl](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/longt5/tglobal_xl/)
+
+## 🤗 Transformers
+
+LongT5 is also available in 🤗 Transformers.
+See for the docs [here](https://huggingface.co/docs/transformers/main/en/model_doc/longt5) and for model checkpoints [here](https://huggingface.co/models?other=longt5).
+
+```python
+import torch
+from transformers import AutoTokenizer, LongT5ForConditionalGeneration
+
+LONG_ARTICLE "..."
+
+tokenizer = AutoTokenizer.from_pretrained("Stancld/longt5-tglobal-large-16384-pubmed-3k_steps")
+
+input_ids = tokenizer(LONG_ARTICLE, return_tensors="pt").input_ids.to("cuda")
+
+model = LongT5ForConditionalGeneration.from_pretrained("Stancld/longt5-tglobal-large-16384-pubmed-3k_steps", return_dict_in_generate=True).to("cuda")
+
+sequences = model.generate(input_ids, global_attention_mask=global_attention_mask).sequences
+
+summary = tokenizer.batch_decode(sequences)
+```
