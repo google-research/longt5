@@ -87,3 +87,18 @@ We have released the following checkpoints for LongT5 pre-trained models:
 * **LongT5-Local-Large** (780 million parameters): [gs://t5-data/pretrained_models/t5x/longt5/local_large](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/longt5/local_large/)
 * **LongT5-TGlobal-Large** (780 million parameters): [gs://t5-data/pretrained_models/t5x/longt5/tglobal_large](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/longt5/tglobal_large/)
 * **LongT5-TGlobal-XL** (3 billion parameters): [gs://t5-data/pretrained_models/t5x/longt5/tglobal_xl](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/longt5/tglobal_xl/)
+
+## Citing LongT5
+
+If you use LongT5 in your research, please cite [LongT5: Efficient Text-To-Text Transformer for Long Sequences](https://aclanthology.org/2022.findings-naacl.55.pdf).
+
+```
+@inproceedings{guo2022longt5,
+    title = "{L}ong{T}5: {E}fficient Text-To-Text Transformer for Long Sequences",
+    author = "Mandy Guo and Joshua Ainslie and David Uthus and Santiago Onta{\~n}{\'o}n and Jianmo Ni and Yun-Hsuan Sung and Yinfei Yang",
+    booktitle = "Findings of the Association for Computational Linguistics: NAACL 2022",
+    year = "2022",
+    url = "https://aclanthology.org/2022.findings-naacl.55",
+    pages = "724--736",
+}
+```
