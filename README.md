@@ -88,6 +88,11 @@ We have released the following checkpoints for LongT5 pre-trained models:
 * **LongT5-TGlobal-Large** (780 million parameters): [gs://t5-data/pretrained_models/t5x/longt5/tglobal_large](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/longt5/tglobal_large/)
 * **LongT5-TGlobal-XL** (3 billion parameters): [gs://t5-data/pretrained_models/t5x/longt5/tglobal_xl](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/longt5/tglobal_xl/)
 
+Additionally, we have released the following checkpoints for mLongT5 pre-trained models:
+* **mLongT5-TGlobal-Base** (250 million parameters): [gs://t5-data/pretrained_models/t5x/mlongt5/tglobal_base](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mlongt5/tglobal_base/)
+* **mLongT5-TGlobal-Large** (780 million parameters): [gs://t5-data/pretrained_models/t5x/mlongt5/tglobal_large](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mlongt5/tglobal_large/)
+* **mLongT5-TGlobal-XL** (3 billion parameters): [gs://t5-data/pretrained_models/t5x/mlongt5/tglobal_xl](https://console.cloud.google.com/storage/browser/t5-data/pretrained_models/t5x/mlongt5/tglobal_xl/)
+
 ## Citing LongT5
 
 If you use LongT5 in your research, please cite [LongT5: Efficient Text-To-Text Transformer for Long Sequences](https://aclanthology.org/2022.findings-naacl.55.pdf).
@@ -102,3 +107,16 @@ If you use LongT5 in your research, please cite [LongT5: Efficient Text-To-Text 
     pages = "724--736",
 }
 ```
+
+For mLongT5, please cite [mLongT5: A Multilingual and Efficient Text-To-Text Transformer for Longer Sequences](https://arxiv.org/abs/2305.11129).
+
+```
+@misc{uthus2023mlongt5,
+    title = "{mLongT5}: A Multilingual and Efficient Text-To-Text Transformer for Longer Sequences",
+    author = "David Uthus and Santiago Onta{\~n}{\'o}n and Joshua Ainslie and Mandy Guo",
+    year = "2023",
+    eprint = "2305.11129",
+    archivePrefix = "arXiv",
+    primaryClass = "cs.CL",
+    url = "https://arxiv.org/abs/2305.11129"
+}
